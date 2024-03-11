@@ -1,0 +1,14 @@
+<div style="border: 1px solid red; margin-top: 5px;">
+    <div style="background-color: green; color: white;">
+        <ul style="border: 2px solid yellow;">
+            {% for comida in resultado%}
+            <h3>COMIDA {{comida.id}}</h3>
+            <li>Marca: {{comida.marca}}</li>
+            <li>Sabor: {{comida.sabor}}</li>
+            <li>Peso: {{comida.peso}}{% block title %} Kgs</li> {% endblock %}
+            <li>Precio: ${{comida.precio}}.-</li>
+            <br>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
